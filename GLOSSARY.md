@@ -1,0 +1,21 @@
+# Glossary
+
+- **Membership inference:** deciding whether a given record was in a model's training set.
+- **Shadow model:** a model the attacker trains on data they control, to learn how members and non-members look to the target.
+- **LiRA (Likelihood Ratio Attack):** membership attack that compares a record's score under fitted "in" and "out" distributions from reference models (Carlini et al., 2022).
+- **TPR at low FPR:** true-positive rate of an attack at a fixed small false-positive rate (for example 0.1%); the preferred privacy-attack metric.
+- **Generalisation gap:** difference between training and test performance; a driver of membership leakage.
+- **Training-data extraction:** getting a generative model to emit memorised training text.
+- **Canary:** a fake secret planted in training data by the defender to measure memorisation.
+- **Exposure:** log2 of the candidate-space size minus log2 of the canary's rank under the model (Carlini et al., 2019).
+- **Model inversion:** reconstructing a representative input for a class from a model's outputs or gradients.
+- **Attribute inference:** predicting a hidden field of a partially known record using a model.
+- **Differential privacy (DP):** guarantee that an algorithm's output distribution changes by at most a factor e^ε (plus δ) when one record changes.
+- **Privacy unit:** the entity DP protects (record, user, user-day).
+- **Privacy budget:** total ε and δ allowed across all computations on a dataset.
+- **DP-SGD:** stochastic gradient descent with per-example clipping and Gaussian noise (Abadi et al., 2016).
+- **Privacy accountant:** method that converts DP-SGD parameters into an (ε, δ) guarantee.
+- **Privacy auditing:** empirically lower-bounding ε by attacking a trained model, often with inserted canaries.
+- **Machine unlearning:** removing the influence of specific training records from a model.
+- **SISA:** Sharded, Isolated, Sliced, Aggregated training, which makes exact unlearning cheaper.
+- **Over-unlearning (Streisand effect):** approximate unlearning that makes deleted records stand out as unusually poorly fit.

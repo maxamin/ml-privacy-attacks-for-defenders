@@ -1,0 +1,7 @@
+[book]
+title = "ML Privacy Attacks for Defenders"
+language = "en"
+src = "."
+
+[output.html]
+git-repository-url = "https://github.com/<you>/ml-privacy-attacks-for-defenders"
